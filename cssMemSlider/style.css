@@ -110,3 +110,19 @@ body{
 	border-color: var(--slider-btn-a);
 	background: var(--slider-btn-a);
 }
+
+/* CSS interactivity */
+
+.slider-radio:checked:nth-child(1)~.slider{--q:1}
+.slider-radio:checked:nth-child(2)~.slider{--q:2}
+.slider-radio:checked:nth-child(3)~.slider{--q:3}
+.slider-radio:checked:nth-child(4)~.slider{--q:4}
+.slider-radio:checked:nth-child(5)~.slider{--q:5}
+
+.image, .label{margin-left: calc((var(--q) - 1) * -100%);}
+.slider-radio:checked:nth-child(1)~.slider .slider-button:nth-child(1):before,
+.slider-radio:checked:nth-child(2)~.slider .slider-button:nth-child(2):before,
+.slider-radio:checked:nth-child(3)~.slider .slider-button:nth-child(3):before,
+.slider-radio:checked:nth-child(4)~.slider .slider-button:nth-child(4):before,
+.slider-radio:checked:nth-child(5)~.slider .slider-button:nth-child(5):before
+{background: transparent;}
