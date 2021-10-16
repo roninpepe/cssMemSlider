@@ -126,3 +126,8 @@ body{
 .slider-radio:checked:nth-child(4)~.slider .slider-button:nth-child(4):before,
 .slider-radio:checked:nth-child(5)~.slider .slider-button:nth-child(5):before
 {background: transparent;}
+
+/* CSS animation */
+
+.image, .label{transition: margin .3s ease-in-out;}
+.slider-button:before{transition: border .2s, background .2s;}
