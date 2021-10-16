@@ -1,0 +1,112 @@
+:root{
+	--main-bg: #25282a;
+	--main-color: #fff;
+}
+
+html{
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+	font-size: 14px;
+	height: 100%;
+	background: var(--main-bg);
+	color: var(--main-color);
+}
+body{
+	margin:0;
+	height: 100%;
+	width: 100%;
+}
+
+/* Slider's variables */
+
+.slider-cont{
+	--slider-height: 100%;
+	--slider-width: 100%;
+	--slider-btn: #71abff;
+	--slider-btn-h: #fff;
+	--slider-btn-a: #aaa;
+}
+
+/* Basic slider layout */
+
+.slider-cont{
+	height: var(--slider-height);
+	width: var(--slider-width);
+}
+.slider{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	height: 100%;
+	padding: 20px;
+	gap: 20px;
+	box-sizing: border-box;
+}
+.slider>*{
+	flex-basis: 0;
+	flex-grow: 1;
+}
+.ctr-lbl-cont {
+    flex-grow: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+}
+.image-cont, .label-cont{
+	flex-basis: 100%;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.image, .label{
+	height: 100%;
+	width: 500%;
+	overflow: hidden;
+	display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+}
+.slide-img-cont, .slide-label{
+	height: 100%;
+	flex-basis: 100%;
+	background: no-repeat center center;
+	background-size: contain;
+}
+.image-cont{min-height: 128px;}
+.image{background: #0003;}
+.controls{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.slider-button{
+	padding: 5px;
+	height: 16px;
+	cursor: pointer;
+}
+.slider-button:before{
+	content: "";
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 100%;
+	border: 3px solid var(--slider-btn);
+	background: var(--slider-btn);
+}
+.slider-button:hover:before{
+	border-color: var(--slider-btn-h);
+	background: var(--slider-btn-h);
+}
+.slider-button:active:before{
+	border-color: var(--slider-btn-a);
+	background: var(--slider-btn-a);
+}
